@@ -14,7 +14,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tema 5. Cloud Computing</a>
+      <a class="navbar-brand" href="index.html">Tema 5. Cloud Computing</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -46,8 +46,16 @@
               <li><a class="dropdown-item" href="./tipos_servicios.html#saas">¿Qué es SaaS?</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Patrones de Diseño</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Patrones de Diseño
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="patrones_diseño.html#pat">Ejemplos de patrones de diseños</a>
+            </li>
+          </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -73,22 +81,738 @@
   <div class="container">
     <section id="compu" class="container pt-2 pb-2 mt-2 mb-2 ">
       <article>
-        <h1>¿Qué es la Cloud Computing? by Carlos D. Polanco</h1>
+        <h1 id="pat">Patrones de diseño</h1><br>
         <div class="d-flex justify-content-center">
-          <img src="https://blog.powerdata.es/hs-fs/hubfs/iStock-963131214.jpg?width=724&name=iStock-963131214.jpg"
-            alt="">
-        </div>
+          <img src="https://cloudacademy.com/wp-content/uploads/2015/01/Asset-84.png"
+            alt="" width="1000px" height="536px">
+        </div><br>
         <div>
           <blockquote class="blockquote">
 
-            La computación en la nube (del inglés cloud computing),​ conocida también como servicios en la nube,
-            informática en la nube, nube de cómputo o simplemente «la nube», es un paradigma que permite ofrecer
-            servicios de computación a través de una red, que usualmente es internet.
-
+            Los patrones de diseño en la computación en la nube son de mucha importancia
+            a la hora de realizar aplicaciones enfatizando la confiabilidad, escalabilidad y por su puesto,
+            la seguridad. Cuando hablamos de patrones de diseño, tenemos la certeza de que cada uno de ellos
+            nos dicen información sobre el problema el cual se están enfrentando.
+            A continuación se muestran algunos de estos patrones, así como sus principales características de uso.
           </blockquote>
         </div>
-
       </article>
+    </section>
+
+    <section id="patrones" class="container  pt-2 pb-2 mt-2 mb-2">
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Ambassador</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Permite crear servicios que realizan solicitudes de red, pero lo hacen mediante otro nombre,
+              es decir, utilizan el de aplicaciones o servicios de consumidores.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Anti-Corruption Layer</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Utiliza una capa que funciona como adaptador cuando se utilizan aplicaciones modernas y
+              sistemas que adoptan propiedades de herencia.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Solicitud y respuesta asincrónicas</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería</h6>
+            <p class="card-text">
+              Permite quitar la relación de acoplamiento que existe entre el back-end 
+              con el front-end, en este patrón, el back-end debe ser asincrónico, sin embargo,
+              el front-end debe obtener respuestas concisas de este mismo.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Backends for Frontends</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación</h6>
+            <p class="card-text">
+              Permite la creación de servicios de back-end independientes, los cuales
+              pueden ser utilizados por diferentes aplicaciones front-end o algunas interfaces.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Bulkhead</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad</h6>
+            <p class="card-text">
+              Permite separar elementos que son utilizados en aplicaciones, para
+              que en caso de que llegue a ocurrir un fallo en alguno, no afecte a 
+              los demás.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Cache-Aside</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Administración de datos,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Realiza peticiones para cargar datos en una memoria caché,
+              esto se realiza desde un almacén en el cual están resguardados los datos.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Organización</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite a los servicios decidir cómo y cuándo se deben procesar operaciones empresariales, 
+              esto evita que dependan de un orquestador central.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Circuit Breaker</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad</h6>
+            <p class="card-text">
+              Permite controlar los errores que pueden tardar un tiempo desmedido en solucionarse
+              durante la conexión a recursos o cualquier tipo de servicios remotos.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Comprobación de notificaciones</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería</h6>
+            <p class="card-text">
+              Evita la sobrecarga del bus de mensajes mediante la división de los mensajes más grandes
+              convirtiéndolos en una verificación de notificaciones y una carga.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Compensating Transaction</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad</h6>
+            <p class="card-text">
+              Realiza una serie de pasos que define una operación con sentido,
+              la cual destruye el trabajo previamente hecho.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Competing Consumers</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería</h6>
+            <p class="card-text">
+              Permite que una múltiple cantidad de consumidores procesen mensajes
+              recibidos a la vez, esto dentro del mismo canal de mensajería en el que se 
+              encuentran.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Compute Resource Consolidation</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación</h6>
+            <p class="card-text">
+              Reúne múltiples operaciones o deberes dentro de una sola unidad de cálculo.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>CQRS</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Administración de datos,
+              Diseño e implementación,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Separa por medio de interfaces independientes las operaciones de lectura
+              de datos de las operaciones de actualización.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Sellos de implementación</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite implementar múltiples copias que son independientes de los
+              componentes de las aplicaciones, incluyendo también los almacenes de 
+              datos.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Event Sourcing</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Administración de datos,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Registra una serie de eventos completa los cuales describen
+              acciones generadas en datos de un dominio, esto se realiza 
+              utilizando un almacén para sólo anexar.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>External Configuration Store</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Mueve a una ubicación centralizada toda la información de configuración 
+              del paquete de implementación de la aplicación.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Federated Identity</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Seguridad</h6>
+            <p class="card-text">
+              Entrega a un proveedor de identidad externo la autenticación.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Gatekeeper</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Seguridad</h6>
+            <p class="card-text">
+              Su función principal es proteger las aplicaciones y servicios
+              por medio de una llamada de hospedador que actúa como un agente
+              entre clientes y aplicación, a su vez, valida y mejora las 
+              solicitudes pasándolas entre ellos junto con los datos.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Gateway Aggregation</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Permite adjuntar múltiples solicitudes individuales en una sola, 
+              esto mediante una puerta de enlace.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Gateway Offloading</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Utiliza un proxy de puerta de enlace en el cual realiza la descarga
+              de una funcionalidad de servicio compartida o también una de 
+              servicio especializada.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Gateway Routing</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Por medio de un solo punto de conexión, encamina las solicitudes
+              a varios servicios.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Geodes</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Permite implementar servicios back-end dentro de un grupo de 
+              nodos geográficos en los cuales cada uno de ellos tiene la 
+              capacidad de atender la solicitud de los clientes sin importar la 
+              región en la que se encuentren.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Health Endpoint Monitoring</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Permite implementar comprobaciones que funcionan en aplicaciones
+              a las cuales pueden intervenir herramientas externas por medio de 
+              puntos de conexión que se encuentran expuestos en intervalos que no 
+              son regulares.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Index Table</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Administración de datos,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite crear índices en los campos de los almacenes de datos
+              a los cuales las consultas tienden a hacer referencia.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Leader Election</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Confiabilidad</h6>
+            <p class="card-text">
+              Permite coordinar acciones hechas poruna colección de instancias 
+              por medio de la elección de una instancia como líder, la cual
+              es la responsable de administrar las demás instancias.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Materialized View</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Administración de datos,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Permite generar vistas las cuales contienen datos en uno o más 
+              almacenes cuando estos no cumplen con el formato específico para 
+              realizar las operaciones de consulta necesarias.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Pipes and Filters</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Mensajería</h6>
+            <p class="card-text">
+              Permite separar en múltiples elementos independientes una tarea 
+              que realiza procesamientos complejos, estos elementos se pueden volver 
+              a usar.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Priority Queue</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite clasificar por prioridad las solicitudes enviadas a los
+              servicios, si es muy alta, se procesan más rápido, si es baja, 
+              tardarán un poco más.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Publicador y suscriptor</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería</h6>
+            <p class="card-text">
+              Le permite a la aplicación anunciar eventos de manera 
+              asíncrona a múltiples consumidores interesados, no es necesario
+              emparejar a los que envían con los que reciben.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Queue-Based Load Leveling</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad
+              Mensajería,
+              Resistencia,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite equilibrar cargas pesadas interminentes utilizando
+              una cola como un búfer entre una tarea y un servicio que invoca.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Retry</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad</h6>
+            <p class="card-text">
+              Permite que una aplicación se encargue de los errores temporales 
+              anticipados cuando tratan de conectarse a servicios o recursos de 
+              red, esto por medio de un reintento de forma transparente de una 
+              opereación que previamente había ocasionado errores.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Scheduler Agent Supervisor</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería,
+              Confiabilidad</h6>
+            <p class="card-text">
+              Permite coordinar un grupo de acciones dentro de otro grupo 
+              distribuído de servicios, así como de otros recursos remotos.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Convoy secuencial</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Mensajería</h6>
+            <p class="card-text">
+              Permite procesar un grupo de mensajes relacionados en un orden 
+              específico, esto sin obstruir el procesamiento de otros grupos
+              de mensajes.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Sharding</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Administración de datos,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite separar un almacén de datos en un grupo de partes horizontales 
+              o particiones de base de datos.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Sidecar</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Proporciona aislamiento y encapsulación mediante la implementación de 
+              componentes de una aplicación dentro de un proceso o contenedor independiente.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Static Content Hosting</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Administración de datos,
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite la implementación de contenido estático dentro de un 
+              servicio de almacenamiento basado en la nube el cual pueda 
+              entregárselo al cliente de manera directa.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Fig Strangler</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Diseño e implementación,
+              Excelencia operativa</h6>
+            <p class="card-text">
+              Permite reemplazar de manera gradual funciones específicas 
+              por servicios y aplicaciones nuevas, esto mediante la migración 
+              de manera incremental de un sistema heredado.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Limitaciones</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Confiabilidad
+              Eficiencia del rendimiento</h6>
+            <p class="card-text">
+              Permite controlar el consumo de recursos que utilizan las llamadas 
+              de aplicaciones, inquilinos individuales o servicios completos.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <br>
+      <article>
+        <div class="card">
+          <div class="card-header">
+            <strong>Valet Key</strong> 
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Categoría: Administración de datos,
+              Seguridad</h6>
+            <p class="card-text">
+              Permite a los clientes el acceso directo restringido a un 
+              recurso o servicio específico mediante el uso de un token 
+              o una contraseña.
+
+            </p>
+          </div>
+        </div>
+      </article>
+
+
+
     </section>
 
   </div>
@@ -107,9 +831,13 @@
 
           <!-- Video -->
           <div class="">
-            <li>Carrillo, A. B. (2021, 5 abril). Los 3 tipos de servicios que existen dentro del cloud computing en las
-              empresas •. Blog de Viafirma.
-              https://www.viafirma.com/blog-xnoccio/es/tipos-servicios-cloud-computing-empresas/</li>
+            <li>D. (2018, 1 marzo). Modelos de diseño en la nube - Azure Architecture Center. Microsoft Docs. 
+              https://docs.microsoft.com/es-es/azure/architecture/patterns/</li>
+
+            <li>Quijano, J. (2017, 6 febrero). 3 patrones de diseño imprescindibles que deberías conocer para tu sistema en cloud: Retry, Valet Key y. . . Genbeta. 
+              https://www.genbeta.com/desarrollo/3-patrones-de-diseno-imprescindibles-que-deberias-conocer-para-tu-sistema-en-cloud-retry-valet-key-y-sharding</li>
+            
+
           </div>
 
         </div>
